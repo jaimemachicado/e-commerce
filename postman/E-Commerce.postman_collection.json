@@ -1,0 +1,128 @@
+{
+	"info": {
+		"_postman_id": "cac769a6-44f1-40a4-a16c-2367e3ef7ff4",
+		"name": "E-Commerce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26899390"
+	},
+	"item": [
+		{
+			"name": "Get stock of product 1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8091/orders/products/1/stock",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"orders",
+						"products",
+						"1",
+						"stock"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get stock of product 2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8091/orders/products/2/stock",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"orders",
+						"products",
+						"2",
+						"stock"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get stock of product 3",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8091/orders/products/3/stock",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"orders",
+						"products",
+						"3",
+						"stock"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Decrease stock of a product",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8091/orders/products/1/decrease-stock",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"orders",
+						"products",
+						"1",
+						"decrease-stock"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Increment products stock",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"products\": [\n        {\n            \"productId\": \"2\",\n            \"quantity\": 50\n        },{\n            \"productId\": \"1\",\n            \"quantity\": 187\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8092/products/stock/increment",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8092",
+					"path": [
+						"products",
+						"stock",
+						"increment"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
